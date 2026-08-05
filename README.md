@@ -4,9 +4,9 @@ A programmer for EPROMs with capacities between 2KiB (2716 series) and 1MiB (27C
 It uses an Arduino NANO and few other components.  
 As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
 
-## Use
+## My Usage
 I need write eproms for pinball machines and I have two, actually
-- parallel port (epromwillem) windows XP o simiar.
+- parallel port (epromwillem) windows XP 32b
 - serial port (PGM27) for DOS.
 
 So, I need a new programmer (with a USB port).
