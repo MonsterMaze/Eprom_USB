@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "a31240c2-7184-4a78-8b8d-de40bd21307b")
 	(paper "A2")
+	(title_block
+		(title "Eprom_USB")
+		(company "ARBIALSOFT")
+		(comment 1 "new_hardware")
+	)
 	(lib_symbols
 		(symbol "74xx:74HC238"
 			(exclude_from_sim no)

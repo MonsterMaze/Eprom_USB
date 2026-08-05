@@ -16,7 +16,8 @@ As a starting point I used the excelent [EpromProgrammer](https://github.com/cip
 Actualized CMakeLists.txt with AI for Ubuntu 24.04 OS in [software](software)
 
 ## Hardware
-New schematics and PCB was modify for me are in the [hardware](hardware) folder.
+New schematics and PCB was modify for me are in the [hardware](FreeCAD) folder.
+For direct PCB work [hardware](hardware) for PDF board
 I add LM317 for the power of Vpp (12.5v 12.75 21v 25v) from 24Vac input
 
 ## Case (to review)
