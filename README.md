@@ -22,8 +22,12 @@ my OS is Ubuntu 24.04 right now.
 * Error detection on writing
 * Additional verify option
 
-## Software
+## GUI Software
 Actualized "CMakeLists.txt" with AI help for Ubuntu 24.04 OS in [software](software)
+I have compiled for Ubuntu 24.04 and is included in folder [sofware/buid](software/build)
+
+## Arduino Software
+The sketch for arduino nano is here: [arduino](arduino_nano)
 
 ## Hardware
 New schematics and PCB was modify for me are in the [hardware](FreeCAD) folder.
