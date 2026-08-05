@@ -1,4 +1,4 @@
-# EpromUSB
+# Eprom_USB
 2716 through 27080 Eprom Programmer
 
 A programmer for EPROMs with capacities between 2KiB (2716 series) and 1MiB (27C080 series).  
@@ -12,9 +12,12 @@ As a starting point I used the excelent [EpromProgrammer](https://github.com/cip
 * Error detection on writing
 * Additional verify option
 
+## Software
+Actualized CMakeLists.txt with AI for Ubuntu 24.04 OS in [Software](Software)
+
 ## Hardware
 New schematics and PCB was modify for me are in the [hardware](hardware) folder.
-I add a LM317 for the power of Vpp (12.5v 12.75 21v 25v) from 24Vac input
+I add LM317 for the power of Vpp (12.5v 12.75 21v 25v) from 24Vac input
 
 ## Case (to review)
 The files for 3D printing a case are available in [FreeCAD](FreeCAD) folder
@@ -64,8 +67,8 @@ The files for 3D printing a case are available in [FreeCAD](FreeCAD) folder
 27C080 - Generic, AM27C080, AT27LV080, M27C801, MX27C8000
 ```
 
-## Programmer images
+## Programmer images (in review)
 ![Inside](images/inside.jpg) ![Assembled Programmer](images/case.jpg)
 
-## GUI images
+## GUI images (in review)
 ![Write](images/write.jpg) ![Verify](images/verify.jpg) ![EPROM options](images/eprom.jpg)
