@@ -13,7 +13,7 @@ As a starting point I used the excelent [EpromProgrammer](https://github.com/cip
 * Additional verify option
 
 ## Software
-Actualized CMakeLists.txt with AI for Ubuntu 24.04 OS in [Software](Software)
+Actualized CMakeLists.txt with AI for Ubuntu 24.04 OS in [software](software)
 
 ## Hardware
 New schematics and PCB was modify for me are in the [hardware](hardware) folder.
