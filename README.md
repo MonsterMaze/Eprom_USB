@@ -4,12 +4,15 @@ A programmer for EPROMs with capacities between 2KiB (2716 series) and 1MiB (27C
 It uses an Arduino NANO and few other components.  
 As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
 
-# Use
+## Use
 I need write eproms for pinball machines and I have two, actually
-- parallel port (epromwillem) windows XP o simiar
-- serial port (PGM27) for DOS 
+- parallel port (epromwillem) windows XP o simiar.
+- serial port (PGM27) for DOS.
+
 So, I need a new programmer (with a USB port).
-That is why I started this project.
+
+That is why I started this project
+
 my OS is Ubuntu 24.04 right now.
 
 ## Main features
@@ -24,7 +27,9 @@ Actualized "CMakeLists.txt" with AI help for Ubuntu 24.04 OS in [software](softw
 
 ## Hardware
 New schematics and PCB was modify for me are in the [hardware](FreeCAD) folder.
+
 For direct PCB work [hardware](hardware) for PDF board
+
 I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
 
 ## Case (to review)
