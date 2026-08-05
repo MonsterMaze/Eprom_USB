@@ -1,9 +1,9 @@
-# EpromProgrammer
+# EpromUSB
 2716 through 27080 Eprom Programmer
 
 A programmer for EPROMs with capacities between 2KiB (2716 series) and 1MiB (27C080 series).  
 It uses an Arduino NANO and few other components.  
-As a starting point I used the excelent [arduino_eprom27_programmer](https://github.com/walhi/arduino_eprom27_programmer) project
+As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
 
 ## Main features
 * It supports a large number of EPROMs with different capacities
@@ -13,9 +13,10 @@ As a starting point I used the excelent [arduino_eprom27_programmer](https://git
 * Additional verify option
 
 ## Hardware
-All the files which you need in order to create the PCBs are in the [hardware](hardware) folder.
+New schematics and PCB was modify for me are in the [hardware](hardware) folder.
+I add a LM317 for the power of Vpp (12.5v 12.75 21v 25v) from 24Vac input
 
-## Case
+## Case (to review)
 The files for 3D printing a case are available in [FreeCAD](FreeCAD) folder
 
 ## Limitations in current implementation
