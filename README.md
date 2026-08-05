@@ -10,6 +10,7 @@ I need write eproms for pinball machines and I have two, actually
 - serial port (PGM27) for DOS 
 So, I need a new programmer (with a USB port).
 That is why I started this project.
+my OS is Ubuntu 24.04 right now.
 
 ## Main features
 * It supports a large number of EPROMs with different capacities
