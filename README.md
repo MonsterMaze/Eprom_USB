@@ -39,11 +39,14 @@ I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
 ## Case (to review)
 The files for 3D printing a case are available in [FreeCAD](FreeCAD) folder
 
+## Images
+The screenshots and images of PCB and others are available in [images](images) folder
+
 ## Limitations in current implementation
 * No Windows support, but it should be easy to implement
 
 ## Supported EPROMs
-```
+
 //------------- 2716 -------------
 2716 - Generic, 2716 - AMD, ET2716, HN462716, 
 2716 - Intel, M2716, M5L2716K, MBM2716, MCM2716, uPD2716
