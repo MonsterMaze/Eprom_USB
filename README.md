@@ -1,6 +1,6 @@
 # Eprom_USB
 2716 through 27080 Eprom Programmer
-A programmer for EPROMs with capacities between 2KiB (2716 series) and 1MiB (27C080 series).  
+A programmer for EPROMs with capacities between 2Kb (2716 series) and 1Mb (27C080 series).  
 It uses an Arduino NANO and few other components.  
 As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
 
