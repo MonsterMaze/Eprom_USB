@@ -44,71 +44,298 @@ The screenshots and images of PCB and others are available in [images](images) f
 
 ## Supported EPROMs
 
-//------------- 2716 -------------
-2716 - Generic, 2716 - AMD, ET2716, HN462716, 
-2716 - Intel, M2716, M5L2716K, MBM2716, MCM2716, uPD2716
-//------------- 27C16 -------------
-27C16 - Generic, 27C16 - National, AM2716B, NMC27C16B
-//------------- 2732 -------------
-2732 - Generic, AM2732, AM9732, F2732, HN462732, 
-2732A, M2732A, MBM2732, NTE2732A, TMM2732D, uPD2732A
-//------------- 27C32 -------------
-27C32 - Generic, AM2732B, NMC27C32B, WS57C43C
-//------------- 2764 -------------
-2764 - Generic, 2764A - Intel, M2764A, M5L2764K, NTE2764, TMM2764AD
-//------------- 27C64 -------------
-27C64 - Generic, 27C64 - Microchip, Cy7C266, MBM27C64, NMC27C64, TMS27C64
-//------------- 27128 -------------
-27128 - Generic, HN4827128G, HN27128, M27128A - Intel, M27128A - ST, 
-M5L27128K, M5M27C128K, MBM27128, NTE21128, TMM27128AD, TMS27128, uPD27128
-//------------- 27C128 -------------
-27C128 - Generic, 27C128 - Microchip, AM27C128, AT27C128, CY27C128, 
-LH57126, M27C128, MSM27C128, NM27C128 - Fairchild, NM27C128 - National, 
-QP27C128, SMJ27C128, TMS27C128
-//------------- 27256 -------------
-27256 - Generic, A68C256, AT27256, 27256 - Intel, M5L27256K, 
-MBM27256, MSM27256, TMM27256, uPD27256
-//------------- 27C256 -------------
-27C256 - Generic, 27C256 - Microchip, AM27C256, AM27H256, CXK27C256DQ, 
-CY27C256, CY27H256, CY7C274, EM27C256, FM27C256, HN27C256A, HN27C256AG, 
-IS27C256, M27C256B, M5M27C256K, MBM27C256, 27HC256, MSM27C256H, 
-NM27C256 - Fairchild, NM27C256 - National, NM27LC256, NMC27C256, 
-NMC87C257, NPX27C256, QP27C256, 27C256 - SEEQ, M27C256 - SEEQ, SMJ27C256 - ASI, 
-SMJ27C256 - TI, SPM27C256, TC57256, TMS27C256, TMS87C257, uPD27C256
-//------------- 27512 -------------
-27512 - Generic, 27512 - Intel, AM27512, HN27512, M27512, 
-M5L27512K, MSM27512, TMM27512AD
-//------------- 27C512 -------------
-27C512 - Generic, 27C512 - Microchip, 27C512 - Intel, 27C512 - Philips, 
-AM27C512, CXK27C512DQ, CY27C512, CY27H512, EM27C512, FM27C512, HN27C512, 
-IS27HC512, MBM27C512, MX27C512, NM27C512, NM27P512, SMJ27C512 - ASI, 
-SMJ27C512 - TI, TC57512AD, TMS27C512, uPD27C512
-//------------- 27C010 -------------
-27C010 - Generic, AM27C010, AM27H010, AM27HB010, CY27C010, CY27H010, 
-27C010 - Intel, EM27C010, FM27C010, HN27C101, IS27C010, M5M27C101K, 
-NM27C010 - Fairchild, NM27C010 - National, NMC27C010, SMJ27C010 - ASI, 
-SMJ27C010 - TI, TMS27C010
-//------------- 27C1001 -------------
-27C1001 - Generic, CXK27C1001DQ, M27C1001, MBM27C1001, MSM27C1000, 
-MX27C1000, TC57C1001, TC57H1001
-//------------- 27C020 -------------
-27C020 - Generic, AM27C020, CY27C020, 27C020 - Intel, EM27C020, 
-IS27C020, NM27C020, TMS27C020
-//------------- 27C2001 -------------
-27C2001 - Generic, M27C2001, MSM27C2000, uPD27C2001
-//------------- 27C040 -------------
-27C040 - Generic, AM27C040, CY27C040, EM27C040, FM27C040, 
-27C040 - Intel, NM27C040, NXP27C040, SMJ27C040 - ASI, 
-SMJ27C040 - Micross, SMJ27C040 - TI, TMS27C040
-//------------- 27C4001 -------------
-27C4001 - Generic, HN27C4001, M27C4001, MBM27C4001, MSM27C401, 
-MX27C4000, TC57C4000, uPD27C4001
-//------------- 27C080 -------------
-27C080 - Generic, AM27C080, AT27LV080, M27C801, MX27C8000
-```
+### 2716 — 2 KB
 
-## Programmer images (in review)
-![Inside](images/inside.jpg) ![Assembled Programmer](images/case.jpg)
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 2716             |
+| AMD              | 2716             |
+| Intel            | 2716             |
+| Hitachi          | HN462716         |
+| Mitsubishi       | M5L2716K         |
+| Fujitsu          | MBM2716          |
+| Motorola         | MCM2716          |
+| NEC              | µPD2716          |
+| -                | ET2716           |
+| -                | M2716            |
 
-## GUI images (in review)
-![Write](images/write.jpg) ![Verify](images/verify.jpg) ![EPROM options](images/eprom.jpg)
+### 27C16 — 2 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C16            |
+| National Semi    | 27C16            |
+| AMD              | AM2716B          |
+| National Semi    | NMC27C16B        |
+
+### 2732 — 4 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 2732             |
+| AMD              | AM2732           |
+| AMD              | AM9732           |
+| Fairchild        | F2732            |
+| Hitachi          | HN462732         |
+| Intel            | 2732A            |
+| ST               | M2732A           |
+| Fujitsu          | MBM2732          |
+| NTE              | NTE2732A         |
+| Toshiba          | TMM2732D         |
+| NEC              | µPD2732A         |
+
+### 27C32 — 4 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C32            |
+| AMD              | AM2732B          |
+| National Semi    | NMC27C32B        |
+| WSI              | WS57C43C         |
+
+### 2764 — 8 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 2764             |
+| Intel            | 2764A            |
+| ST               | M2764A           |
+| Mitsubishi       | M5L2764K         |
+| NTE              | NTE2764          |
+| Toshiba          | TMM2764AD        |
+
+### 27C64 — 8 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C64            |
+| Microchip        | 27C64            |
+| Cypress          | Cy7C266          |
+| Fujitsu          | MBM27C64         |
+| National Semi    | NMC27C64         |
+| Texas Instruments| TMS27C64         |
+
+### 27128 — 16 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27128            |
+| Hitachi          | HN4827128G       |
+| Hitachi          | HN27128          |
+| Intel            | M27128A          |
+| ST               | M27128A          |
+| Mitsubishi       | M5L27128K        |
+| Mitsubishi       | M5M27C128K       |
+| Fujitsu          | MBM27128         |
+| NTE              | NTE21128         |
+| Toshiba          | TMM27128AD       |
+| Texas Instruments| TMS27128         |
+| NEC              | µPD27128         |
+
+### 27C128 — 16 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C128           |
+| Microchip        | 27C128           |
+| AMD              | AM27C128         |
+| Atmel            | AT27C128         |
+| Cypress          | CY27C128         |
+| Sharp            | LH57126          |
+| ST               | M27C128          |
+| Oki              | MSM27C128        |
+| Fairchild        | NM27C128         |
+| National Semi    | NM27C128         |
+| -                | QP27C128         |
+| Texas Instruments| SMJ27C128        |
+| Texas Instruments| TMS27C128        |
+
+### 27256 — 32 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27256            |
+| -                | A68C256          |
+| Atmel            | AT27256          |
+| Intel            | 27256            |
+| Mitsubishi       | M5L27256K        |
+| Fujitsu          | MBM27256         |
+| Oki              | MSM27256         |
+| Toshiba          | TMM27256         |
+| NEC              | µPD27256         |
+
+### 27C256 — 32 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C256           |
+| Microchip        | 27C256           |
+| AMD              | AM27C256         |
+| AMD              | AM27H256         |
+| Sony             | CXK27C256DQ      |
+| Cypress          | CY27C256         |
+| Cypress          | CY27H256         |
+| Cypress          | CY7C274          |
+| -                | EM27C256         |
+| -                | FM27C256         |
+| Hitachi          | HN27C256A        |
+| Hitachi          | HN27C256AG       |
+| ISSI             | IS27C256         |
+| ST               | M27C256B         |
+| Mitsubishi       | M5M27C256K       |
+| Fujitsu          | MBM27C256        |
+| -                | 27HC256          |
+| Oki              | MSM27C256H       |
+| Fairchild        | NM27C256         |
+| National Semi    | NM27C256         |
+| National Semi    | NM27LC256        |
+| National Semi    | NMC27C256        |
+| National Semi    | NMC87C257        |
+| -                | NPX27C256        |
+| -                | QP27C256         |
+| SEEQ             | 27C256           |
+| SEEQ             | M27C256          |
+| ASI              | SMJ27C256        |
+| Texas Instruments| SMJ27C256        |
+| -                | SPM27C256        |
+| Toshiba          | TC57256          |
+| Texas Instruments| TMS27C256        |
+| Texas Instruments| TMS87C257        |
+| NEC              | µPD27C256        |
+
+### 27512 — 64 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27512            |
+| Intel            | 27512            |
+| AMD              | AM27512          |
+| Hitachi          | HN27512          |
+| ST               | M27512           |
+| Mitsubishi       | M5L27512K        |
+| Oki              | MSM27512         |
+| Toshiba          | TMM27512AD       |
+
+### 27C512 — 64 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C512           |
+| Microchip        | 27C512           |
+| Intel            | 27C512           |
+| Philips          | 27C512           |
+| AMD              | AM27C512         |
+| Sony             | CXK27C512DQ      |
+| Cypress          | CY27C512         |
+| Cypress          | CY27H512         |
+| -                | EM27C512         |
+| -                | FM27C512         |
+| Hitachi          | HN27C512         |
+| ISSI             | IS27HC512        |
+| Fujitsu          | MBM27C512        |
+| Macronix         | MX27C512         |
+| National Semi    | NM27C512         |
+| National Semi    | NM27P512         |
+| ASI              | SMJ27C512        |
+| Texas Instruments| SMJ27C512        |
+| Toshiba          | TC57512AD        |
+| Texas Instruments| TMS27C512        |
+| NEC              | µPD27C512        |
+
+### 27C010 — 128 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C010           |
+| AMD              | AM27C010         |
+| AMD              | AM27H010         |
+| AMD              | AM27HB010        |
+| Cypress          | CY27C010         |
+| Cypress          | CY27H010         |
+| Intel            | 27C010           |
+| -                | EM27C010         |
+| -                | FM27C010         |
+| Hitachi          | HN27C101         |
+| ISSI             | IS27C010         |
+| Mitsubishi       | M5M27C101K       |
+| Fairchild        | NM27C010         |
+| National Semi    | NM27C010         |
+| National Semi    | NMC27C010        |
+| ASI              | SMJ27C010        |
+| Texas Instruments| SMJ27C010        |
+| Texas Instruments| TMS27C010        |
+
+### 27C1001 — 128 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C1001          |
+| Sony             | CXK27C1001DQ     |
+| ST               | M27C1001         |
+| Fujitsu          | MBM27C1001       |
+| Oki              | MSM27C1000       |
+| Macronix         | MX27C1000        |
+| Toshiba          | TC57C1001        |
+| Toshiba          | TC57H1001        |
+
+### 27C020 — 256 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C020           |
+| AMD              | AM27C020         |
+| Cypress          | CY27C020         |
+| Intel            | 27C020           |
+| -                | EM27C020         |
+| ISSI             | IS27C020         |
+| National Semi    | NM27C020         |
+| Texas Instruments| TMS27C020        |
+
+### 27C2001 — 256 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C2001          |
+| ST               | M27C2001         |
+| Oki              | MSM27C2000       |
+| NEC              | µPD27C2001       |
+
+### 27C040 — 512 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C040           |
+| AMD              | AM27C040         |
+| Cypress          | CY27C040         |
+| -                | EM27C040         |
+| -                | FM27C040         |
+| Intel            | 27C040           |
+| National Semi    | NM27C040         |
+| NXP              | NXP27C040        |
+| ASI              | SMJ27C040        |
+| Micross          | SMJ27C040        |
+| Texas Instruments| SMJ27C040        |
+| Texas Instruments| TMS27C040        |
+
+### 27C4001 — 512 KB
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C4001          |
+| Hitachi          | HN27C4001        |
+| ST               | M27C4001         |
+| Fujitsu          | MBM27C4001       |
+| Oki              | MSM27C401        |
+| Macronix         | MX27C4000        |
+| Toshiba          | TC57C4000        |
+| NEC              | µPD27C4001       |
+
+### 27C080 — 1024 KB (1 MB)
+
+| Manufacturer     | Part Number      |
+|------------------|------------------|
+| Generic          | 27C080           |
+| AMD              | AM27C080         |
+| Atmel            | AT27LV080        |
+| ST               | M27C801          |
+| Macronix         | MX27C8000        |
