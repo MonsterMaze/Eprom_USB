@@ -32,18 +32,15 @@ The sketch for arduino nano is here: [arduino](arduino_nano)
 ## Hardware
 New schematics and PCB was modify for me are in the [hardware](FreeCAD) folder.
 
-For direct PCB work [hardware](hardware) for PDF board
-
 I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
 
-## Case (to review)
-The files for 3D printing a case are available in [FreeCAD](FreeCAD) folder
+For non KiCad users, schematics and PCB [hardware](hardware) in format PDF
 
 ## Images
 The screenshots and images of PCB and others are available in [images](images) folder
 
 ## Limitations in current implementation
-* No Windows support, but it should be easy to implement
+* No Windows support yet, but it should be easy to implement
 
 ## Supported EPROMs
 
