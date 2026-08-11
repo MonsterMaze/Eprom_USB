@@ -30,7 +30,7 @@ I have compiled for Ubuntu 24.04 and is included in folder [sofware/buid](softwa
 The sketch for arduino nano is here: [arduino](arduino_nano)
 
 ## Hardware
-New schematics and PCB was modify for me are in the [hardware](FreeCAD) folder.
+New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.
 
 I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
 
