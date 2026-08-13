@@ -1,0 +1,9 @@
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/Eprom_USB.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/edit_cache.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/rebuild_cache.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/list_install_components.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/install.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/install/local.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/install/strip.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/Eprom_USB_autogen_timestamp_deps.dir
+/home/alex/Documentos/EpromProgrammer-main/gui/build/CMakeFiles/Eprom_USB_autogen.dir
