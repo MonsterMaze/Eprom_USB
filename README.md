@@ -29,8 +29,7 @@ I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft
 
 ## GUI Software (windows w11)
 Actualized "CMakeLists.txt" for Windows 11 OS 
-The complete source for project is in [soft_linux](soft_linux)
-I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft_linux/build)
+The complete source for project is in [soft_Win64](soft_Win64)
 
 ## Arduino Software
 The sketch for arduino nano is here: [arduino](arduino_nano)
