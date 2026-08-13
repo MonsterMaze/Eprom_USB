@@ -18,7 +18,7 @@ option(COMPILE_QT_APPLICATION "Compilar la aplicación Qt" ON)
 if(COMPILE_QT_APPLICATION)
     find_package(Qt5 COMPONENTS Core Widgets SerialPort REQUIRED)
     
-    set(QT_APPLICATION_NAME "EpQt")
+    set(QT_APPLICATION_NAME "Eprom_USB")
     
     SET(CMAKE_AUTOMOC ON)
     
