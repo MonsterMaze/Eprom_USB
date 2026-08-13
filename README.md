@@ -22,9 +22,15 @@ my OS is Ubuntu 24.04 right now.
 * Error detection on writing
 * Additional verify option
 
-## GUI Software
-Actualized "CMakeLists.txt" with AI help for Ubuntu 24.04 OS in [software](software)
-I have compiled for Ubuntu 24.04 and is included in folder [sofware/buid](software/build)
+## GUI Software (Ubuntu Linux)
+Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS 
+The complete source for project is in [soft_linux](soft_linux)
+I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft_linux/build)
+
+## GUI Software (windows w11)
+Actualized "CMakeLists.txt" for Windows 11 OS 
+The complete source for project is in [soft_linux](soft_linux)
+I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft_linux/build)
 
 ## Arduino Software
 The sketch for arduino nano is here: [arduino](arduino_nano)
