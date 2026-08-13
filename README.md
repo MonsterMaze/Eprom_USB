@@ -5,7 +5,7 @@ It uses an Arduino NANO and few other components.
 As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
 
 ## My Usage
-I need write eproms for pinball machines and I have two, actually
+I need write eproms for pinball machines and I have two, actually (not working)
 - parallel port (epromwillem) windows XP 32b
 - serial port (PGM27) for DOS.
 
@@ -22,18 +22,19 @@ my OS is Ubuntu 24.04 right now.
 * Error detection on writing
 * Additional verify option
 
-## GUI Software (Ubuntu Linux)
+## GUI Software (Ubuntu Linux_x64)
 Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS 
 The complete source for project is in [soft_linux](soft_linux)
 I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft_linux/build)
 
-## GUI Software (windows w11)
+## GUI Software (windows_x64)
 Actualized "CMakeLists.txt" for Windows 11 OS 
 The complete source for project is in [soft_Win64](soft_Win64)
 
-## Eprom Programmer v1.0.0 - Multiplatform Release
+## Eprom_USB v1.0.0 - Multiplatform Release
 
-This release contains the standalone, portable binaries for the Eprom USB Programmer software, fully compatible with both Windows and Linux. No external installation or build tools are required.
+This release contains the standalone, portable binaries for the Eprom USB Programmer software, 
+fully compatible with both Windows and Linux. No external installation or build tools are required.
 
 ### 🪟 Windows Instructions (64-bit)
 1. Download **`Eprom_USB_v1.0_Windows_x64.zip`**.
