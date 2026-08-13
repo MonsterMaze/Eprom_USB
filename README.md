@@ -31,6 +31,37 @@ I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft
 Actualized "CMakeLists.txt" for Windows 11 OS 
 The complete source for project is in [soft_Win64](soft_Win64)
 
+## Eprom Programmer v1.0.0 - Multiplatform Release
+
+This release contains the standalone, portable binaries for the Eprom USB Programmer software, fully compatible with both Windows and Linux. No external installation or build tools are required.
+
+### 🪟 Windows Instructions (64-bit)
+1. Download **`Eprom_USB_v1.0_Windows_x64.zip`**.
+2. Extract the `.zip` file entirely into a folder of your choice.
+3. Double-click **`Eprom_USB.exe`** to launch the graphical interface.
+*Note: All required Qt, Gettext (`libintl`), and `libiconv` DLLs are included inside the package.*
+
+### 🐧 Linux / Ubuntu Instructions (64-bit AppImage)
+1. Download **`Eprom_USB-x86_64.AppImage`**.
+2. Open your terminal, navigate to the folder where you downloaded the file, and grant it execution permissions:
+   ```bash
+   chmod +x Eprom_USB-x86_64.AppImage
+   ```
+3. Launch the application by double-clicking it or running:
+   ```bash
+   ./Eprom_USB-x86_64.AppImage
+   ```
+
+⚠️ **Important for Linux Users (Serial Port Permission):**
+If the application cannot open or detect your USB serial port, your Linux user might lack dialout permissions. Fix this by running the following command once, then log out and log back into Ubuntu:
+```bash
+sudo usermod -a -G dialout \$USER
+```
+
+---
+*Developed with Qt 5 and CMake. Built with native MinGW (Windows) and GCC (Linux) compiler suites.*
+
+
 ## Arduino Software
 The sketch for arduino nano is here: [arduino](arduino_nano)
 
