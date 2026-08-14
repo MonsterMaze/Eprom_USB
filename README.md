@@ -71,7 +71,7 @@ New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](
 
 I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
 
-For non KiCad users, schematics and PCB [hardware](hardware) in format PDF
+For non KiCad users, schematics and PCB [hardware](hardware) in PDF format
 
 New v2 PCB make for Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) front, bottom and silk
 
