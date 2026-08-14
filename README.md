@@ -25,7 +25,7 @@ my OS is Ubuntu 24.04 right now.
 ## GUI Software (Ubuntu Linux_x64)
 Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS 
 The complete source for project is in [soft_linux](soft_linux)
-I have compiled for Ubuntu 24.04 and is included in folder [sof_linux/buid](soft_linux/build)
+I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/buid](soft_linux/build)
 
 ## GUI Software (windows_x64)
 Actualized "CMakeLists.txt" for Windows 11 OS 
