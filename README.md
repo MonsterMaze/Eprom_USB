@@ -2,7 +2,7 @@
 2716 through 27080 Eprom Programmer
 A programmer for EPROMs with capacities between 2Kb (2716 series) and 1Mb (27C080 series).  
 It uses an Arduino NANO and few other components.  
-As a starting point I used the excelent [EpromProgrammer](https://github.com/ciprian-stingu/EpromProgrammer) project
+As a starting point I used the excelent [EpromProgrammer_ciprian-stingu](https://github.com/ciprian-stingu/EpromProgrammer) project
 
 ## My Usage
 I need write eproms for pinball machines and I have two, actually (not working)
@@ -64,7 +64,7 @@ sudo usermod -a -G dialout \$USER
 
 
 ## Arduino Software
-The sketch for arduino nano is here: [arduino](arduino_nano)
+The sketch for arduino nano is here: [arduino_nano](arduino_nano)
 
 ## Hardware
 New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.
