@@ -78,9 +78,6 @@ New v2 PCB make for Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) fron
 ## Images
 The screenshots and images of PCB and others are available in [images](images) folder
 
-## Limitations in current implementation
-* No Windows support yet, but it should be easy to implement
-
 ## Supported EPROMs
 
 ### 2716 — 2 KB
