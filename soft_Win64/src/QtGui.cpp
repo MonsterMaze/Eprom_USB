@@ -24,8 +24,8 @@
 //----------------------------------------------------------------------
 #include "QtGui.h"
 #include <libintl.h>
-#include <sstream>
-#include <iostream>
+// #include <sstream>
+// #include <iostream>
 #include <string.h>
 #include <math.h>
 #include "QtIcons.h"
@@ -36,13 +36,19 @@ QtGui::QtGui(int argc, char **argv)
     pArgc = argc;
     pArgv = argv;
     application = new QApplication(pArgc, pArgv, true);
-    
+
+    // 1. Forzar atributos de menú
+    QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, false);
+
+    // 2. AGREGA ESTA LÍNEA AQUÍ (Fuerza el estilo nativo de Qt con soporte total de íconos)
+    application->setStyle("Fusion");
+
     mainWindow = new QWidget();
-    
+
     QIcon *MainIcon = GetMainIcon();
     mainWindow->setWindowIcon(*MainIcon);
     delete MainIcon;
-    
+
     mainWindow->resize(700, 640);
     //set title
     QString MainWindowTitle = MAKE_STR(APP_NAME);
@@ -97,76 +103,97 @@ void QtGui::CloseMainWindow(void)
     CloseSerialPort();
 }
 //----------------------------------------------------------------------
-
 QToolBar *QtGui::CreateToolbar(void)
-{    
+{
     QToolBar *mainToobar = new QToolBar();
-    
+
     mainToobar->setStyleSheet("QToolButton { padding-left: 5px; padding-right: 5px; }");
-    
-    connectProgrammerAction = new QAction(QIcon::fromTheme("view-refresh"), "Connect", NULL);
+
+    // 1. Botón CONNECT (view-refresh -> SP_BrowserReload)
+    QIcon refreshIcon = application->style()->standardIcon(QStyle::SP_BrowserReload);
+    connectProgrammerAction = new QAction(refreshIcon, "Connect", NULL);
     connect(connectProgrammerAction, SIGNAL(triggered()), this, SLOT(ShowConnectSlot()));
+    connectProgrammerAction->setIconVisibleInMenu(true);
     mainToobar->addAction(connectProgrammerAction);
-    
+
     mainToobar->addSeparator();
-    
-    openFileAction = new QAction(QIcon::fromTheme("document-open"), "Open File", NULL);
+
+    // 2. Botón OPEN FILE (document-open -> SP_DialogOpenButton)
+    QIcon openIcon = application->style()->standardIcon(QStyle::SP_DialogOpenButton);
+    openFileAction = new QAction(openIcon, "Open File", NULL);
     connect(openFileAction, SIGNAL(triggered()), this, SLOT(FileOpenSlot()));
     openFileAction->setEnabled(false);
+    openFileAction->setIconVisibleInMenu(true);
     mainToobar->addAction(openFileAction);
-    
-    saveFileAction = new QAction(QIcon::fromTheme("document-save"), "Save File", NULL);
+
+    // 3. Botón SAVE FILE (document-save -> SP_DialogSaveButton)
+    QIcon saveIcon = application->style()->standardIcon(QStyle::SP_DialogSaveButton);
+    saveFileAction = new QAction(saveIcon, "Save File", NULL);
     connect(saveFileAction, SIGNAL(triggered()), this, SLOT(FileSaveSlot()));
     saveFileAction->setEnabled(false);
+    saveFileAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(saveFileAction);
-    
+
     mainToobar->addSeparator();
-    
-    readDeviceAction = new QAction(QIcon::fromTheme("go-up"), "Read device", NULL);
+
+    // 4. Botón READ DEVICE (go-up -> SP_ArrowUp)
+    QIcon readIcon = application->style()->standardIcon(QStyle::SP_ArrowUp);
+    readDeviceAction = new QAction(readIcon, "Read device", NULL);
     connect(readDeviceAction, SIGNAL(triggered()), this, SLOT(ReadEpromSlot()));
     readDeviceAction->setEnabled(false);
+    readDeviceAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(readDeviceAction);
-    
-    writeDeviceAction = new QAction(QIcon::fromTheme("go-down"), "Write device", NULL);
+
+    // 5. Botón WRITE DEVICE (go-down -> SP_ArrowDown)
+    QIcon writeIcon = application->style()->standardIcon(QStyle::SP_ArrowDown);
+    writeDeviceAction = new QAction(writeIcon, "Write device", NULL);
     connect(writeDeviceAction, SIGNAL(triggered()), this, SLOT(WriteEpromSlot()));
     writeDeviceAction->setEnabled(false);
+    writeDeviceAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(writeDeviceAction);
-    
-    verifyDataAction = new QAction(QIcon::fromTheme("dialog-ok"), "Verify", NULL);
+
+    // 6. Botón VERIFY (dialog-ok -> SP_DialogApplyButton)
+    QIcon verifyIcon = application->style()->standardIcon(QStyle::SP_DialogApplyButton);
+    verifyDataAction = new QAction(verifyIcon, "Verify", NULL);
     connect(verifyDataAction, SIGNAL(triggered()), this, SLOT(VerifyDataSlot()));
     verifyDataAction->setEnabled(false);
+    verifyDataAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(verifyDataAction);
-    
-    //stopRWDeviceAction = new QAction(QIcon::fromTheme("process-stop"), "Stop", NULL);
-    //connect(stopRWDeviceAction, SIGNAL(triggered()), this, SLOT(StopRWDevice()));
-    //stopRWDeviceAction->setEnabled(false);
-    //mainToobar->addAction(stopRWDeviceAction);
-    
+
     mainToobar->addSeparator();
-    
-    hardwareTestAction = new QAction(QIcon::fromTheme("input-tablet"), "Hardware Test", NULL);
+
+    // 7. Botón HARDWARE TEST (input-tablet -> SP_ComputerIcon)
+    QIcon hwTestIcon = application->style()->standardIcon(QStyle::SP_ComputerIcon);
+    hardwareTestAction = new QAction(hwTestIcon, "Hardware Test", NULL);
     connect(hardwareTestAction, SIGNAL(triggered()), this, SLOT(HardwareTestSlot()));
     hardwareTestAction->setEnabled(false);
+    hardwareTestAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(hardwareTestAction);
-    
-    readVoltageAction = new QAction(QIcon::fromTheme("battery"), "Read Voltage", NULL);
+
+    // 8. Botón READ VOLTAGE (battery -> SP_CommandLink)
+    QIcon voltageIcon = application->style()->standardIcon(QStyle::SP_CommandLink);
+    readVoltageAction = new QAction(voltageIcon, "Read Voltage", NULL);
     connect(readVoltageAction, SIGNAL(triggered()), this, SLOT(ShowVoltageSlot()));
     readVoltageAction->setEnabled(false);
+    readVoltageAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(readVoltageAction);
-    
+
     mainToobar->addSeparator();
-    
-    showHelpAction = new QAction(QIcon::fromTheme("help-about"), "Info", NULL);
+
+    // 9. Botón INFO (help-about -> SP_MessageBoxInformation)
+    QIcon helpIcon = application->style()->standardIcon(QStyle::SP_MessageBoxInformation);
+    showHelpAction = new QAction(helpIcon, "Info", NULL);
     connect(showHelpAction, SIGNAL(triggered()), this, SLOT(ShowHelpSlot()));
+    showHelpAction->setIconVisibleInMenu(true); // Forzar visibilidad
     mainToobar->addAction(showHelpAction);
-    
+
     mainToobar->addSeparator();
-    
+
     QWidgetAction* progressBarAct = new QWidgetAction(this);
     mainProgressBar = new QProgressBar();
     progressBarAct->setDefaultWidget(mainProgressBar);
     mainToobar->addAction(progressBarAct);
-    
+
     return mainToobar;
 }
 //----------------------------------------------------------------------
