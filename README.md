@@ -21,31 +21,31 @@ my OS is Ubuntu 24.04 right now.
 * Additional verify option
 
 ## GUI Software (Ubuntu Linux_x64)
-Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.
-The complete source for project is in [soft_linux](soft_linux)
-I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/buid](soft_linux/build)
+Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.  
+The complete source for project is in [soft_linux](soft_linux)  
+I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/buid](soft_linux/build)  
 With some changes, QTCreator build [soft_linux/buid/Desktop-Debug](soft_linux/build/Desktop-Debug)
 
 ## GUI Software (windows_x64)
-Actualized "CMakeLists.txt" for Windows 11 OS.
-QTCreator project compiler with some few changes.
-The complete source for project is in [soft_Win64](soft_Win64)
+Actualized "CMakeLists.txt" for Windows 11 OS.  
+QTCreator project compiler with some few changes.  
+The complete source for project is in [soft_Win64](soft_Win64)  
 I test the exe in w7-64b and w11-64b.
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
 
-This release contains the standalone, portable binaries for the Eprom USB Programmer software, 
+This release contains the standalone, portable binaries for the Eprom USB Programmer software,   
 fully compatible with both Windows and Linux. No external installation or build tools are required.
 
 ### 🪟 Windows Instructions (64-bit)
-1. Download **`Eprom_USB_v1.0_Windows_x64.zip`**.
-2. Extract the `.zip` file entirely into a folder of your choice.
-3. Double-click **`Eprom_USB.exe`** to launch the graphical interface.
+1. Download **`Eprom_USB_v1.0_Windows_x64.zip`**.  
+2. Extract the `.zip` file entirely into a folder of your choice.  
+3. Double-click **`Eprom_USB.exe`** to launch the graphical interface.  
 *Note: All required Qt, Gettext (`libintl`), and `libiconv` DLLs are included inside the package.*
 
 ### 🐧 Linux / Ubuntu Instructions (64-bit AppImage)
-1. Download **`Eprom_USB-x86_64.AppImage`**.
-2. Open your terminal, navigate to the folder where you downloaded the file, and grant it execution permissions:
+1. Download **`Eprom_USB-x86_64.AppImage`**.  
+2. Open your terminal, navigate to the folder where you downloaded the file, and grant it execution permissions:  
    ```bash
    chmod +x Eprom_USB-x86_64.AppImage
    ```
@@ -55,7 +55,8 @@ fully compatible with both Windows and Linux. No external installation or build 
    ```
 
 ⚠️ **Important for Linux Users (Serial Port Permission):**
-If the application cannot open or detect your USB serial port, your Linux user might lack dialout permissions. Fix this by running the following command once, then log out and log back into Ubuntu:
+If the application cannot open or detect your USB serial port, your Linux user might lack dialout permissions.  
+Fix this by running the following command once, then log out and log back into Ubuntu:
 ```bash
 sudo usermod -a -G dialout \$USER
 ```
@@ -68,12 +69,9 @@ sudo usermod -a -G dialout \$USER
 The sketch for arduino nano is here: [arduino_nano](arduino_nano)
 
 ## Hardware
-New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.
-
-I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input
-
-For non KiCad users, schematics and PCB [hardware](hardware) in PDF format
-
+New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.  
+I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input  
+For non KiCad users, schematics and PCB [hardware](hardware) in PDF format  
 New v2 PCB make for Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) front, bottom and silk
 
 ## Images
