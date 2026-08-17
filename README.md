@@ -31,7 +31,9 @@ With some changes, QTCreator build [soft_linux/buid/Desktop-Debug](soft_linux/bu
 
 ## GUI Software (windows_x64)
 Actualized "CMakeLists.txt" for Windows 11 OS 
+QTCreator project compiler with some few changes
 The complete source for project is in [soft_Win64](soft_Win64)
+I test the exe in w7-64b and w11-64b
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
 
