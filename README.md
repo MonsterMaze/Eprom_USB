@@ -21,19 +21,16 @@ my OS is Ubuntu 24.04 right now.
 * Additional verify option
 
 ## GUI Software (Ubuntu Linux_x64)
-Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS
-
+Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.
 The complete source for project is in [soft_linux](soft_linux)
-
 I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/buid](soft_linux/build)
-
 With some changes, QTCreator build [soft_linux/buid/Desktop-Debug](soft_linux/build/Desktop-Debug)
 
 ## GUI Software (windows_x64)
-Actualized "CMakeLists.txt" for Windows 11 OS 
-QTCreator project compiler with some few changes
+Actualized "CMakeLists.txt" for Windows 11 OS.
+QTCreator project compiler with some few changes.
 The complete source for project is in [soft_Win64](soft_Win64)
-I test the exe in w7-64b and w11-64b
+I test the exe in w7-64b and w11-64b.
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
 
