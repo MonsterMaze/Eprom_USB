@@ -14,11 +14,11 @@ That is why I started this project
 my OS is Ubuntu 24.04 right now.
 
 ## Main features
-* It supports a large number of EPROMs with different capacities
-* 2 programming speeds (normal & fast). Fast programming speed is available if you configure the VCC correctly
-* On fast programming alghoritm, writing a 27C040 EPROM takes around 290 seconds
-* Error detection on writing
-* Additional verify option
+* It supports a large number of EPROMs with different capacities  
+* 2 programming speeds (normal & fast). Fast programming speed is available if you configure the VCC correctly  
+* On fast programming alghoritm, writing a 27C040 EPROM takes around 290 seconds  
+* Error detection on writing  
+* Additional verify option  
 
 ## GUI Software (Ubuntu Linux_x64)
 Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.  
