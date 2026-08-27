@@ -1,17 +1,17 @@
 # Eprom_USB
 2716 through 27080 Eprom Programmer
-A programmer for EPROMs with capacities between 2Kb (2716 series) and 1Mb (27C080 series).  
+A programmer for UV EPROMs with capacities between 2Kb (2716 series) and 1Mb (27C080 series).  
 It uses an Arduino NANO and few other components.  
 As a starting point I used the excelent [EpromProgrammer_ciprian-stingu](https://github.com/ciprian-stingu/EpromProgrammer) project
 
-## My Usage
-I need write eproms for pinball machines and I have two, actually (not working)
-- parallel port (epromwillem) windows XP 32b
-- serial port (PGM27) for DOS.
+## Why this project?
+I need write eproms for pinball machines and I have two not working
+- Parallel port (epromwillem) windows XP 32b
+- Serial port (PGM27) for DOS.
 
-So, I need a new programmer (with a USB port).
+So, I need a new Eprom programmer with a USB port.
 That is why I started this project
-my OS is Ubuntu 24.04 right now.
+my OS is Ubuntu 24.04 - 64b right now.
 
 ## Main features
 * It supports a large number of EPROMs with different capacities  
@@ -33,7 +33,6 @@ The complete source for project is in [soft_Win64](soft_Win64)
 I test the exe in w7-64b and w11-64b.
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
-
 This release contains the standalone, portable binaries for the Eprom USB Programmer software,   
 fully compatible with both Windows and Linux. No external installation or build tools are required.
 
@@ -70,7 +69,7 @@ The sketch for arduino nano is here: [arduino_nano](arduino_nano)
 
 ## Hardware
 New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.  
-I add LM317 for the power of Vpp (12.5v - 12.75 - 21v - 25v) from 24Vac input  
+I add LM317 for the Vpp power (12.5v - 12.75 - 21v - 25v) from 24Vac input  
 For non KiCad users, schematics and PCB [hardware](hardware) in PDF format  
 New v2 PCB make for Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) front, bottom and silk
 
