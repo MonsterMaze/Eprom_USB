@@ -71,7 +71,7 @@ The sketch for arduino nano is here: [arduino_nano](arduino_nano)
 New schematics and PCB into FreeCAD project, was modify for me are in [FreeCAD](FreeCAD) folder.  
 I add LM317 for the Vpp power (12.5v - 12.75 - 21v - 25v) from 24Vac input  
 For non KiCad users, schematics and PCB [hardware](hardware) in PDF format  
-New v2 PCB make for Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) front, bottom and silk
+New v2 PCB made by Ivana, in PDF format [hardware/PCB_v2](hardware/PCB_v2) front, bottom and silk
 
 ## Images
 The screenshots and images of PCB and others are available in [images](images) folder
