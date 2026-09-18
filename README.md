@@ -24,7 +24,7 @@ my OS is Ubuntu 24.04 - 64b right now.
 Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.  
 New version 1.12 with 0.35v of voltage margin. (0.25v)
 The complete source for project is in [soft_linux](soft_linux)  
-I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/AppImage](soft_linux/AppImage)  
+I have compiled for Ubuntu 24.04 and is included in Release v1.12 folder [soft_linux/AppImage](https://github.com/MonsterMaze/Eprom_USB/releases/download/Linux/Eprom_USB-x86_64.AppImage)  
 With some changes for icons, locale, debug etc.
 
 ## GUI Software (windows_x64)
