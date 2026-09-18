@@ -22,7 +22,7 @@ my OS is Ubuntu 24.04 - 64b right now.
 
 ## GUI Software (Ubuntu Linux_x64)
 Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.  
-New version 1.12
+New version 1.12 with 0.35v of voltage margin. (0.25v)
 The complete source for project is in [soft_linux](soft_linux)  
 I have compiled for Ubuntu 24.04 and is included in folder [soft_linux/buid](soft_linux/build)  
 With some changes, QTCreator build [soft_linux/buid/Desktop-Debug](soft_linux/build/Desktop-Debug)
