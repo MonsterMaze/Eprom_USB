@@ -31,6 +31,8 @@ With some changes for icons, locale, debug etc.
 Actualized "CMakeLists.txt" for Windows 11 OS.  
 QTCreator project compiler with some few changes.  
 The complete source for project is in [soft_Win64](soft_Win64)  
+I have compiled in w11 and is included in Release v1.12 folder [Release 1.12/Eprom_USB_v1.0_Windows_x64.zip](https://github.com/MonsterMaze/Eprom_USB/releases/download/v1.12/Eprom_USB_v1.0_Windows_x64.zip)
+
 I test the exe in w7-64b and w11-64b.
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
