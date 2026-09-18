@@ -36,7 +36,7 @@
 #define _MAKE_STR(x) #x
 
 #define APP_PACKAGE "EpGui"
-#define APP_VERSION "1.0"
+#define APP_VERSION "1.12"
 
 #define DEFAULT_LOG_FILENAME APP_PACKAGE ".log"
 #define CONFIG_DIRNAME "." APP_PACKAGE

@@ -29,7 +29,6 @@
 #include <string.h>
 #include <math.h>
 #include "QtIcons.h"
-#include <QDebug>
 //----------------------------------------------------------------------
 
 QtGui::QtGui(int argc, char **argv)
@@ -98,100 +97,78 @@ void QtGui::CloseMainWindow(void)
     CloseSerialPort();
 }
 //----------------------------------------------------------------------
+
 QToolBar *QtGui::CreateToolbar(void)
-{
-     QToolBar *mainToobar = new QToolBar();
-
-     mainToobar->setStyleSheet("QToolButton { padding-left: 5px; padding-right: 5px; }");
-
-     // 1. Botón CONNECT (SP_BrowserReload)
-     QIcon refreshIcon = application->style()->standardIcon(QStyle::SP_BrowserReload);
-     connectProgrammerAction = new QAction(refreshIcon, "Connect", NULL);
-     connect(connectProgrammerAction, SIGNAL(triggered()), this, SLOT(ShowConnectSlot()));
-     connectProgrammerAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(connectProgrammerAction);
-
-     mainToobar->addSeparator();
-
-     // 2. Botón OPEN FILE (SP_DialogOpenButton)
-     QIcon openIcon = application->style()->standardIcon(QStyle::SP_DialogOpenButton);
-     openFileAction = new QAction(openIcon, "Open File", NULL);
-     connect(openFileAction, SIGNAL(triggered()), this, SLOT(FileOpenSlot()));
-     openFileAction->setEnabled(false);
-     openFileAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(openFileAction);
-
-     // 3. Botón SAVE FILE (SP_DialogSaveButton)
-     QIcon saveIcon = application->style()->standardIcon(QStyle::SP_DialogSaveButton);
-     saveFileAction = new QAction(saveIcon, "Save File", NULL);
-     connect(saveFileAction, SIGNAL(triggered()), this, SLOT(FileSaveSlot()));
-     saveFileAction->setEnabled(false);
-     saveFileAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(saveFileAction);
-
-     mainToobar->addSeparator();
-
-     // 4. Botón READ DEVICE (SP_ArrowUp)
-     QIcon readIcon = application->style()->standardIcon(QStyle::SP_ArrowUp);
-     readDeviceAction = new QAction(readIcon, "Read device", NULL);
-     connect(readDeviceAction, SIGNAL(triggered()), this, SLOT(ReadEpromSlot()));
-     readDeviceAction->setEnabled(false);
-     readDeviceAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(readDeviceAction);
-
-     // 5. Botón WRITE DEVICE (SP_ArrowDown)
-     QIcon writeIcon = application->style()->standardIcon(QStyle::SP_ArrowDown);
-     writeDeviceAction = new QAction(writeIcon, "Write device", NULL);
-     connect(writeDeviceAction, SIGNAL(triggered()), this, SLOT(WriteEpromSlot()));
-     writeDeviceAction->setEnabled(false);
-     writeDeviceAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(writeDeviceAction);
-
-     // 6. Botón VERIFY (SP_DialogApplyButton)
-     QIcon verifyIcon = application->style()->standardIcon(QStyle::SP_DialogApplyButton);
-     verifyDataAction = new QAction(verifyIcon, "Verify", NULL);
-     connect(verifyDataAction, SIGNAL(triggered()), this, SLOT(VerifyDataSlot()));
-     verifyDataAction->setEnabled(false);
-     verifyDataAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(verifyDataAction);
-
-     mainToobar->addSeparator();
-
-     // 7. Botón HARDWARE TEST (SP_ComputerIcon)
-     QIcon hwTestIcon = application->style()->standardIcon(QStyle::SP_ComputerIcon);
-     hardwareTestAction = new QAction(hwTestIcon, "Hardware Test", NULL);
-     connect(hardwareTestAction, SIGNAL(triggered()), this, SLOT(HardwareTestSlot()));
-     hardwareTestAction->setEnabled(false);
-     hardwareTestAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(hardwareTestAction);
-
-     // 8. Botón READ VOLTAGE (SP_CommandLink)
-     QIcon voltageIcon = application->style()->standardIcon(QStyle::SP_CommandLink);
-     readVoltageAction = new QAction(voltageIcon, "Read Voltage", NULL);
-     connect(readVoltageAction, SIGNAL(triggered()), this, SLOT(ShowVoltageSlot()));
-     readVoltageAction->setEnabled(false);
-     readVoltageAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(readVoltageAction);
-
-     mainToobar->addSeparator();
-
-     // 9. Botón INFO (SP_MessageBoxInformation)
-     QIcon helpIcon =application->style()->standardIcon(QStyle::SP_MessageBoxInformation);
-     showHelpAction = new QAction(helpIcon, "Info", NULL);
-     connect(showHelpAction, SIGNAL(triggered()), this, SLOT(ShowHelpSlot()));
-     showHelpAction->setIconVisibleInMenu(true);
-     mainToobar->addAction(showHelpAction);
-
-     mainToobar->addSeparator();
-
-     QWidgetAction* progressBarAct = new QWidgetAction(this);
-     mainProgressBar = new QProgressBar();
-     progressBarAct->setDefaultWidget(mainProgressBar);
-     mainToobar->addAction(progressBarAct);
-
-     return mainToobar;
+{    
+    QToolBar *mainToobar = new QToolBar();
+    
+    mainToobar->setStyleSheet("QToolButton { padding-left: 5px; padding-right: 5px; }");
+    
+    connectProgrammerAction = new QAction(QIcon::fromTheme("view-refresh"), "Connect", NULL);
+    connect(connectProgrammerAction, SIGNAL(triggered()), this, SLOT(ShowConnectSlot()));
+    mainToobar->addAction(connectProgrammerAction);
+    
+    mainToobar->addSeparator();
+    
+    openFileAction = new QAction(QIcon::fromTheme("document-open"), "Open File", NULL);
+    connect(openFileAction, SIGNAL(triggered()), this, SLOT(FileOpenSlot()));
+    openFileAction->setEnabled(false);
+    mainToobar->addAction(openFileAction);
+    
+    saveFileAction = new QAction(QIcon::fromTheme("document-save"), "Save File", NULL);
+    connect(saveFileAction, SIGNAL(triggered()), this, SLOT(FileSaveSlot()));
+    saveFileAction->setEnabled(false);
+    mainToobar->addAction(saveFileAction);
+    
+    mainToobar->addSeparator();
+    
+    readDeviceAction = new QAction(QIcon::fromTheme("go-up"), "Read device", NULL);
+    connect(readDeviceAction, SIGNAL(triggered()), this, SLOT(ReadEpromSlot()));
+    readDeviceAction->setEnabled(false);
+    mainToobar->addAction(readDeviceAction);
+    
+    writeDeviceAction = new QAction(QIcon::fromTheme("go-down"), "Write device", NULL);
+    connect(writeDeviceAction, SIGNAL(triggered()), this, SLOT(WriteEpromSlot()));
+    writeDeviceAction->setEnabled(false);
+    mainToobar->addAction(writeDeviceAction);
+    
+    verifyDataAction = new QAction(QIcon::fromTheme("dialog-ok"), "Verify", NULL);
+    connect(verifyDataAction, SIGNAL(triggered()), this, SLOT(VerifyDataSlot()));
+    verifyDataAction->setEnabled(false);
+    mainToobar->addAction(verifyDataAction);
+    
+    //stopRWDeviceAction = new QAction(QIcon::fromTheme("process-stop"), "Stop", NULL);
+    //connect(stopRWDeviceAction, SIGNAL(triggered()), this, SLOT(StopRWDevice()));
+    //stopRWDeviceAction->setEnabled(false);
+    //mainToobar->addAction(stopRWDeviceAction);
+    
+    mainToobar->addSeparator();
+    
+    hardwareTestAction = new QAction(QIcon::fromTheme("input-tablet"), "Hardware Test", NULL);
+    connect(hardwareTestAction, SIGNAL(triggered()), this, SLOT(HardwareTestSlot()));
+    hardwareTestAction->setEnabled(false);
+    mainToobar->addAction(hardwareTestAction);
+    
+    readVoltageAction = new QAction(QIcon::fromTheme("battery"), "Read Voltage", NULL);
+    connect(readVoltageAction, SIGNAL(triggered()), this, SLOT(ShowVoltageSlot()));
+    readVoltageAction->setEnabled(false);
+    mainToobar->addAction(readVoltageAction);
+    
+    mainToobar->addSeparator();
+    
+    showHelpAction = new QAction(QIcon::fromTheme("help-about"), "Info", NULL);
+    connect(showHelpAction, SIGNAL(triggered()), this, SLOT(ShowHelpSlot()));
+    mainToobar->addAction(showHelpAction);
+    
+    mainToobar->addSeparator();
+    
+    QWidgetAction* progressBarAct = new QWidgetAction(this);
+    mainProgressBar = new QProgressBar();
+    progressBarAct->setDefaultWidget(mainProgressBar);
+    mainToobar->addAction(progressBarAct);
+    
+    return mainToobar;
 }
-
 //----------------------------------------------------------------------
 
 void QtGui::CreateDataTab(QTabWidget *mainTabs)
@@ -437,49 +414,50 @@ void QtGui::ConnectToSerialPortSlot(void)
 }
 //----------------------------------------------------------------------
 
-
 void QtGui::OpenSerialPort(QString path)
 {
-     serialPort->setPortName(path);
-     serialPort->setBaudRate(QSerialPort::Baud115200);
+    serialPort->setPortName(path);
+    serialPort->setBaudRate(QSerialPort::Baud57600);
 
-     // Conexión directa en un solo hilo estable
-     if(serialPort->open(QIODevice::ReadWrite))
-     {
-         serialPort->setFlowControl(QSerialPort::NoFlowControl);
+    if(serialPort->open(QIODevice::ReadWrite))
+    {
+        int counter = 0;
+        while(!serialPort->waitForReadyRead(1) && ++counter < 5000);
+        if(serialPort->bytesAvailable())
+        {
+            QByteArray readData;
+            
+            while(!serialPort->atEnd()) {
+                readData += serialPort->readAll();
+            }
+            
+            serialPort->clear();
+            
+            if(readData.indexOf(PROGRAMMER_NAME, 0) != -1)
+            {
+                LogMessage("Connected to eprom programmer.\n");
 
-         // Espera controlada de 2 segundos para que el Arduino despierte sin colgar la CPU
-         serialPort->waitForReadyRead(2000);
+                arduinoIO = new ArduinoIO(serialPort);
 
-         if(serialPort->bytesAvailable() || serialPort->waitForReadyRead(100))
-         {
-             QByteArray readData = serialPort->readAll();
-             serialPort->clear();
+                serialOperationStartConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationStartSignal()), this, SLOT(UpdateCursorOnSerialOperationStartSlot()));
+                serialOperationErrorConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationErrorSignal(const char *)), this, SLOT(ShowMessageOnSerialOperationErrorSlot(const char *)));
+                serialOperationCompleteConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationCompleteSignal()), this, SLOT(UpdateCursorOnSerialOperationCompleteSlot()));
 
-             if(readData.indexOf(PROGRAMMER_NAME, 0) != -1)
-             {
-                 LogMessage("Connected to eprom programmer.\n");
-
-                 arduinoIO = new ArduinoIO(serialPort);
-
-                 serialOperationStartConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationStartSignal()), this, SLOT(UpdateCursorOnSerialOperationStartSlot()));
-                 serialOperationErrorConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationErrorSignal(const char*)), this, SLOT(ShowMessageOnSerialOperationErrorSlot(const char *)));
-                 serialOperationCompleteConnection = QObject::connect(arduinoIO, SIGNAL(SerialOperationCompleteSignal()), this, SLOT(UpdateCursorOnSerialOperationCompleteSlot()));
-
-                 ResetVariables();
-                 CloseConnectWindowSlot();
-
-                 connectProgrammerAction->setText("Disconnect");
-                 UpdateButtonsStatus();
-                 return;
-             }
-         }
-         LogMessage("Eprom programmer not found.\n");
-         CloseSerialPort();
-     }
-     else {
-         QMessageBox::critical(mainWindow, "Error", serialPort->errorString());
-     }
+                ResetVariables();
+                
+                CloseConnectWindowSlot();
+                
+                connectProgrammerAction->setText("Disconnect");
+                UpdateButtonsStatus();
+                return;
+            }
+        }
+        LogMessage("Eprom programmer not found.\n");
+        CloseSerialPort();
+    } 
+    else {
+        QMessageBox::critical(mainWindow, "Error", serialPort->errorString());
+    }
 }
 //----------------------------------------------------------------------
 
@@ -626,7 +604,6 @@ void QtGui::ShowHelpSlot(void)
 		"as published by the Free Software Foundation;\n"
 		"either version 2 of the License, or\n"
 		"(at your option) any later version."
-        "Modify by armb (c) 2026"
     );
     infoLabel->setAlignment(Qt::AlignHCenter);
     
@@ -894,33 +871,32 @@ void QtGui::RefresVoltageSlot(void)
 
 void QtGui::HardwareTestSlot(void)
 {
-     if(selectedEprom != EPROM_TYPE::NONE)
-     {
-         QMessageBox::critical(mainWindow, "Hardware test", "Please remove any EPROM from socket\nand set the Eprom type to NONE.");
-         return;
-     }
-
-     DisableButtons();
-
-     LogMessage("Starting hardware test...\n");
-     hardwareTestConnection = QObject::connect(arduinoIO, SIGNAL(HardwareTestStepSignal(const char *)), this, SLOT(HardwareTestStepSlot(const char *)));
-     arduinoIO->HardwareTest();
+    if(selectedEprom != EPROM_TYPE::NONE)
+    {
+        QMessageBox::critical(mainWindow, "Hardware test", "Please remove any EPROM from socket\nand set the Eprom type to NONE.");
+        return;
+    }
+    
+    DisableButtons();
+    
+    LogMessage("Starting hardware test...\n");
+    hardwareTestConnection = QObject::connect(arduinoIO, SIGNAL(HardwareTestStepSignal(const char *)), this, SLOT(HardwareTestStepSlot(const char *)));
+    arduinoIO->HardwareTest();
 }
+//----------------------------------------------------------------------
 
 void QtGui::HardwareTestStepSlot(const char *message)
 {
-     LogMessage(message);
-
-     if(strcmp(arduinoIO->HW_TEST_END, message) == 0)
-     {
-         QObject::disconnect(hardwareTestConnection);
-         UpdateButtonsStatus();
-     }
-
-     QCoreApplication::processEvents();
-
+    LogMessage(message);
+    
+    if(strcmp(arduinoIO->HW_TEST_END, message) == 0) 
+    {
+        QObject::disconnect(hardwareTestConnection);
+        UpdateButtonsStatus();
+    }
+    
+    QCoreApplication::processEvents();
 }
-
 //----------------------------------------------------------------------
 
 void QtGui::ReadEpromSlot(void)
@@ -1105,11 +1081,11 @@ void QtGui::FileOpenSlot(void)
 
 void QtGui::WriteEpromSlot(void)
 {
-    if(!fileLoaded)
+    /*if(!fileLoaded) 
     {
         QMessageBox::critical(mainWindow, "Write EPROM", "No file loaded!");
         return;
-    }
+    }*/
     
     extern EPROM EpromsList[];
 
@@ -1124,28 +1100,12 @@ void QtGui::WriteEpromSlot(void)
     DisableButtons();
     
     operationTimer.start();
-
-    qDebug() << "=== Valores desde la interfaz ===";
-    qDebug() << "entryProgVcc texto:" << entryProgVcc->text();
-    qDebug() << "entryVpp texto:" << entryVpp->text();
-    qDebug() << "VCC convertido:" << entryProgVcc->text().toDouble();
-    qDebug() << "VPP convertido:" << entryVpp->text().toDouble();
-
-    // Convertir correctamente coma/punto
-    QString vccText = entryProgVcc->text().replace(',', '.');
-    QString vppText = entryVpp->text().replace(',', '.');
-
-    double vcc = vccText.toDouble();
-    double vpp = vppText.toDouble();
-
-
-    qDebug() << "VCC:" << vcc << " | VPP:" << vpp;
-
+    
     arduinoIO->WriteEprom(
-        vcc,
-        vpp,
+        entryProgVcc->text().toDouble(), 
+        entryVpp->text().toDouble(), 
         EpromsList[selectedEprom].ProgrammingAlgorithm[progAlgoCombo->currentIndex()]
-        );
+    );
 }
 //----------------------------------------------------------------------
 

@@ -23,6 +23,9 @@
  */
 //----------------------------------------------------------------------
 #include "ArduinoIO.h"
+#include <QDebug>
+#include <locale.h>
+#include <string>
 //----------------------------------------------------------------------
 
 ArduinoIO::ArduinoIO(QSerialPort *port)
@@ -340,6 +343,12 @@ int ArduinoIO::WaitForReadyRead(int timeout)
 
 void ArduinoIO::WriteEprom(double vcc, double vpp, PRG_ALGO algo)
 {
+    // === DEBUG DE VOLTAJES ===
+    qDebug() << "======= DEBUG VOLTAJES =======";
+    qDebug() << "VCC recibido:" << vcc;
+    qDebug() << "VPP recibido:" << vpp;
+    qDebug() << "Algoritmo:" << (int)algo;
+
     if(writeBuffer.length() != maxBufferSize)
     {
         QString errorMessage = "Invalid data length of ";
@@ -353,7 +362,16 @@ void ArduinoIO::WriteEprom(double vcc, double vpp, PRG_ALGO algo)
     serialDataConnection = QObject::connect(serialPort, SIGNAL(readyRead()), this, SLOT(WriteEpromSlot()));
     
     char command[1024];
-    sprintf(command, COMMAND_WRITE_EPROM, vcc, vpp, algo);
+
+    // Forzar punto decimal (solución del locale)
+    std::string oldLocale = setlocale(LC_NUMERIC, nullptr);
+    setlocale(LC_NUMERIC, "C");
+
+    //vcc, vpp
+    sprintf(command, COMMAND_WRITE_EPROM, vcc, vpp, (int)algo);
+
+    setlocale(LC_NUMERIC, oldLocale.c_str());
+
     Send(command);
 }
 //----------------------------------------------------------------------
@@ -371,7 +389,11 @@ void ArduinoIO::WriteEpromSlot(void)
     
     QString str = RESPONSE_OK;
     str.append("\r\n");
-    
+
+    qDebug() << ">>> ERROR RECIBIDO DEL ARDUINO:";
+    qDebug() << readData;
+    qDebug() << "Limpio:" << CleanErrorMessage(readData);
+
     int index = 0;
     if((index = readData.indexOf(str.toUtf8(), 0)) != -1)
     {
@@ -386,6 +408,9 @@ void ArduinoIO::WriteEpromSlot(void)
         index = 0;
         if((index = readData.indexOf(str.toUtf8(), 0)) != -1)
         {
+            qDebug() << "Encontre la cadena en el índice:" << index;
+            // ... resto del código
+
             readData.remove(0, index + str.length());
             
             bool writeCompleted = true;
@@ -484,7 +509,10 @@ void ArduinoIO::WriteEpromSlot(void)
         emit WriteCompleteSignal(false, errorMessage.toStdString().c_str());
         emit SerialOperationErrorSignal(errorMessage.toStdString().c_str());
     }
-    
+
+    qDebug() << "NO encontre la cadena esperada";
+    qDebug() << "Contenido completo de readData:" << readData;
+
     emit SerialOperationCompleteSignal();
 }
 //----------------------------------------------------------------------
