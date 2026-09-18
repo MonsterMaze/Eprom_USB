@@ -22,22 +22,38 @@
  * 
  */
 //------------------------------------------------------------------------------
-#include "src/QtGui.h"
-#include <stdlib.h>
-#include <sys/resource.h>
-#include <QCoreApplication> // <-- AGREGÁ ESTA INCLUSIÓN AQUÍ
+#ifndef DEFINES_H
+#define DEFINES_H
 //------------------------------------------------------------------------------
+//os detection
+#if defined(__linux__)
+	#define OS_IS_LINUX 1
+#elif defined(_WIN32) || defined(_WIN64)
+	#define OS_IS_WINDOWS 1
+#endif
 
-int main(int argc, char **argv)
-{
-    struct rlimit core_limits;
-    core_limits.rlim_cur = core_limits.rlim_max = RLIM_INFINITY;
-    setrlimit(RLIMIT_CORE, &core_limits);
+#define MAKE_STR(x) _MAKE_STR(x)
+#define _MAKE_STR(x) #x
 
-    QtGui *gui = new QtGui(argc, argv);
-    gui->Run();
+#define APP_PACKAGE "EpGui"
+#define APP_VERSION "1.12"
 
-    delete gui;
-    return 0;
-}
+#define DEFAULT_LOG_FILENAME APP_PACKAGE ".log"
+#define CONFIG_DIRNAME "." APP_PACKAGE
+#define CONFIG_FILENAME APP_PACKAGE ".ini"
+
+#define PROGRAMMER_NAME "27[C]XXXX programmer"
+#define LOG_MAX_LINES_DISPLAYED 1000 
+#define DISPLAY_COLUMNS 16
+#define BLOCK_SIZE 32
+#define PROGRAMMING_ALGORITHMS 2
+
+//#define ALT_EPROMS
+
+#if defined(OS_IS_LINUX)
+  #define ATTR_UNUSED __attribute__((unused))
+#elif defined(OS_IS_WINDOWS)
+  #define ATTR_UNUSED
+#endif
 //------------------------------------------------------------------------------
+#endif
