@@ -34,11 +34,11 @@ The complete source for project is in [soft_Win64](soft_Win64)
 I have compiled in w11 and is included in Release v1.12 folder [Release 1.12/Eprom_USB_v1.0_Windows_x64.zip](https://github.com/MonsterMaze/Eprom_USB/releases/download/v1.12/Eprom_USB_v1.0_Windows_x64.zip)
 
 ## GUI Software (windows_x64) v2
-I have some problems with serial Port in windows (!)
-so...
+I have some problems with serial Port in windows (!)  
+so...  
 Modify all project and name v2
 The complete source for project is in [soft_Win64_v2](soft_Win64_v2)  
-I have compiled in w11 and is included in Release v1.20 folder [Release 1.20/Eprom_USB_v2_Windows_x64.zip](https://github.com/MonsterMaze/Eprom_USB/releases/download/v1.12/Eprom_USB_v1.0_Windows_x64.zip)
+I have compiled in w11 and is included in Release v1.20 folder [Release 1.20/Eprom_USB_v2_Windows_x64.zip](https://github.com/MonsterMaze/Eprom_USB/releases/download/v1.12/Eprom_USB_v1.0_Windows_x64.zip)  
 I test the exe in w7-64b and w11-64b.
 
 ## Eprom_USB v1.0.0 - Multiplatform Release
