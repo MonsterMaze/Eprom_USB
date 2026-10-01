@@ -25,7 +25,8 @@ Actualized "CMakeLists.txt" and code with AI help for Ubuntu 24.04 OS.
 New version 1.12 with 0.35v of voltage margin. (0.25v)
 The complete source for project is in [soft_linux](soft_linux)  
 I have compiled for Ubuntu 24.04 and is included in Release v1.12 folder [Release 1.12/AppImage](https://github.com/MonsterMaze/Eprom_USB/releases/download/Linux/Eprom_USB-x86_64.AppImage)  
-With some changes for icons, locale, debug etc.
+With some changes for icons, locale, debug etc.  
+Last version Linux  [soft_linux v2.26](soft_linux)  
 
 ## GUI Software (windows_x64)
 Actualized "CMakeLists.txt" for Windows 11 OS.  
